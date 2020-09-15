@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "scripts": {
+    "lint:css": "stylelint './src/**/*.js'",
+    "start": "react-scripts start",
+    "test": "jest",
+    "test:update": "jest --update-snapshot"
+  },
+  "dependencies": {
+    "@testing-library/react": "^11.0.2",
+    "babel-plugin-styled-components": "^1.11.1",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^7.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.3",
+    "styled-components": "^5.2.0",
+    "stylelint": "^13.7.1",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
