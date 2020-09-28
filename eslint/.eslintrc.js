@@ -7,6 +7,7 @@ module.exports = {
     'airbnb',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:react-redux/recommended',
     'plugin:jest/recommended',
     'plugin:jest/style',
     'plugin:testing-library/react',
@@ -18,7 +19,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'jest', 'testing-library'],
+  plugins: [],
   rules: {
     'no-empty': ['error', { allowEmptyCatch: true }],
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
