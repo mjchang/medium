@@ -4,10 +4,10 @@ div {
   justify-content: center;
   align-items: center;
   font-size: 12px !important; /* stylelint-disable-line declaration-no-important */
-
-  /* stylelint-disable */
-  :focus {
-    outline: none;
-  }
-  /* stylelint-enable */
 }
+
+/* stylelint-disable */
+div:focus {
+  outline: none;
+}
+/* stylelint-enable */
