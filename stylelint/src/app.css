@@ -1,0 +1,13 @@
+div {
+  /* stylelint-disable-next-line value-no-vendor-prefix */
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px !important; /* stylelint-disable-line declaration-no-important */
+
+  /* stylelint-disable */
+  :focus {
+    outline: none;
+  }
+  /* stylelint-enable */
+}
