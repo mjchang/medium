@@ -17,10 +17,8 @@ export default {
     },
   },
   decorators: [
-    Story => (
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Story />
-      </div>
+    story => (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>{story()}</div>
     ),
   ],
 };
