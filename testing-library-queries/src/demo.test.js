@@ -73,10 +73,10 @@ describe('query by label text', () => {
 
   test('should return element based on label htmlFor', () => {
     const { getByLabelText } = render(
-      <>
+      <div>
         <label htmlFor="field">Field</label>
         <input id="field" />
-      </>
+      </div>
     );
     expect(getByLabelText('Field')).toMatchInlineSnapshot(`
       <input
@@ -87,10 +87,10 @@ describe('query by label text', () => {
 
   test('should return element based on label aria-labelledby', () => {
     const { getByLabelText } = render(
-      <>
+      <div>
         <label id="field">Field</label>
         <input aria-labelledby="field" />
-      </>
+      </div>
     );
     expect(getByLabelText('Field')).toMatchInlineSnapshot(`
       <input
