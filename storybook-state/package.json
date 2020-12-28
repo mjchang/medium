@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "start": "npm run storybook",
-    "storybook": "start-storybook -p 3000",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
