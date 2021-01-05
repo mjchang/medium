@@ -1,0 +1,34 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+import { Button } from "./Button";
+
+<Meta title="Example/Button MDX" component={Button} />
+
+# Button
+## This is a demo of a Button markdown documentation page.
+
+- This is a primary button:
+
+<Story name="Primary">
+  <Button label="Button" primary />
+</Story>
+
+
+- This is a secondary button:
+
+<Story name="Secondary">
+  <Button label="Button" />
+</Story>
+
+
+- This is a large button:
+
+<Story name="Large">
+  <Button label="Button" size="large" />
+</Story>
+
+
+- This is a small button:
+
+<Story name="Small">
+  <Button label="Button" size="small" />
+</Story>
