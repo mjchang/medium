@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-export function useLocalStorageNonString(key, initialState) {
+function useLocalStorageNonString(key, initialState) {
   const serializedInitialState = JSON.stringify(initialState);
   let storageValue = initialState;
   try {
@@ -9,22 +9,22 @@ export function useLocalStorageNonString(key, initialState) {
     localStorage.setItem(key, serializedInitialState);
   }
   const [value, setValue] = useState(storageValue);
-  const updatedSetOption = useCallback(
-    newOption => {
-      const serializedNewOption = JSON.stringify(newOption);
+  const updatedSetValue = useCallback(
+    newValue => {
+      const serializedNewValue = JSON.stringify(newValue);
       if (
-        serializedNewOption === serializedInitialState ||
-        typeof newOption === 'undefined'
+        serializedNewValue === serializedInitialState ||
+        typeof newValue === 'undefined'
       ) {
         localStorage.removeItem(key);
       } else {
-        localStorage.setItem(key, serializedNewOption);
+        localStorage.setItem(key, serializedNewValue);
       }
-      setValue(newOption);
+      setValue(newValue ?? initialState);
     },
     [initialState, serializedInitialState, key]
   );
-  return [value, updatedSetOption];
+  return [value, updatedSetValue];
 }
 
 export default useLocalStorageNonString;

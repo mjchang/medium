@@ -2,18 +2,18 @@ import { useCallback, useState } from 'react';
 
 function useLocalStorage(key, initialState) {
   const [value, setValue] = useState(localStorage.getItem(key) ?? initialState);
-  const updatedSetOption = useCallback(
-    newOption => {
-      if (newOption === initialState || typeof newOption === 'undefined') {
+  const updatedSetValue = useCallback(
+    newValue => {
+      if (newValue === initialState || typeof newValue === 'undefined') {
         localStorage.removeItem(key);
       } else {
-        localStorage.setItem(key, newOption);
+        localStorage.setItem(key, newValue);
       }
-      setValue(newOption ?? initialState);
+      setValue(newValue ?? initialState);
     },
     [initialState, key]
   );
-  return [value, updatedSetOption];
+  return [value, updatedSetValue];
 }
 
 export default useLocalStorage;
